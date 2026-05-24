@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Divider App',
       home: const MainPage(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 123, 255)),
+      ),
     );
   }
 }
@@ -39,7 +42,6 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-
       body: IndexedStack(
         index: currentIndex,
         children: pages,
@@ -56,7 +58,6 @@ class _MainPageState extends State<MainPage> {
         },
 
         items: const [
-
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Início',
