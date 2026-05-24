@@ -1,3 +1,4 @@
+import 'package:divider_app/widgets/custom_button.dart';
 import 'package:divider_app/widgets/custom_input.dart';
 import 'package:flutter/material.dart';
 
@@ -25,11 +26,18 @@ class _ProfilePageState extends State<ProfilePage> {
               hintText: 'Digite seu nome',
               label: 'Nome',
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 24),
             CustomInput(
               controller: emailController,
               hintText: 'Digite seu e-mail',
               label: 'E-mail',
+            ),
+            const SizedBox(height: 24),
+            CustomButton(
+              text: 'Salvar',
+              onPressed: () {
+
+              },
             ),
           ],
         ),

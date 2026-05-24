@@ -16,7 +16,18 @@ class MyApp extends StatelessWidget {
       title: 'Divider App',
       home: const MainPage(),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 0, 123, 255)),
+        colorScheme: ColorScheme.light(
+          primary: const Color.fromARGB(255, 0, 90, 190),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(255, 0, 90, 190),
+            textStyle: const TextStyle(color: Colors.white),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -48,7 +59,6 @@ class _MainPageState extends State<MainPage> {
       ),
 
       bottomNavigationBar: BottomNavigationBar(
-
         currentIndex: currentIndex,
 
         onTap: (index) {
