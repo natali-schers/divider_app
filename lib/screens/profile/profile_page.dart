@@ -36,7 +36,6 @@ class _ProfilePageState extends State<ProfilePage> {
             CustomButton(
               text: 'Salvar',
               onPressed: () {
-
               },
             ),
           ],
